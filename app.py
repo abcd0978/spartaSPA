@@ -1,3 +1,4 @@
+import uuid
 from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
@@ -7,7 +8,7 @@ client = MongoClient(  'mongodb+srv://sparta:test@cluster0.bkvgtmw.mongodb.net/r
 
 db = client.dbsparta
 
-@app.route('/')
+@app.route('/', methods=["GET","POST"])
 def home():
    return render_template('index.html')
 
@@ -19,6 +20,7 @@ def hi_post():
     message_receive = request.form['message_give']
    
     doc = {
+      'id': str(uuid.uuid1()),
       'name': name_receive,
      'password': password_receive,
      'message': message_receive
@@ -43,6 +45,19 @@ def hi_PUT():
     db.hi.update_one({query,})
     return jsonify({'result': 'success'})
 
+@app.route("/delComment", methods=["POST"])
+def del_comment():
+    id_receive = request.form['id_give']
+    pw_receive = request.form['pw_give']
+
+    target = db.hi.find_one({'id':id_receive, 'password': pw_receive})
+
+    if target == None:
+        return jsonify({'result': 0})
+    else:
+        db.hi.delete_one({'id':id_receive})
+        return jsonify({'result': 1})
+
 
 if __name__ == '__main__':
-   app.run('0.0.0.0', port=5000, debug=True)
+   app.run('0.0.0.0', port=5001, debug=True)
