@@ -200,7 +200,7 @@ body {
 }
 .wrapper .module-team .team .title {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   color: #6f7073;
   font-size: 44px;
   line-height: normal;
@@ -211,7 +211,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100px;
+  height: 125px;
 }
 .wrapper .module-team .team .title:before {
   content: "";
@@ -220,7 +220,7 @@ body {
   height: 10px;
   background: #6f7073;
   border-radius: 50px;
-  bottom: 0;
+  bottom: 15px;
   opacity: 0.2;
 }
 @media screen and (max-width: 799px) {
@@ -293,56 +293,91 @@ body {
   position: relative;
 }
 
-.wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card #김민규{
+.wrapper
+  .module-team
+  .team
+  .team-cards
+  .swiper-container
+  .swiper-slide
+  .card
+  #김민규 {
   position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   border-radius: 4px 4px 0px 0px;
   transition: all 0.4s ease;
-  background: linear-gradient(140deg, #FFFFFF, #7b37e1);
+  background: linear-gradient(140deg, #ffffff, #7b37e1);
   z-index: 1;
 }
 
-.wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card #손형정{
+.wrapper
+  .module-team
+  .team
+  .team-cards
+  .swiper-container
+  .swiper-slide
+  .card
+  #손형정 {
   position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   border-radius: 4px 4px 0px 0px;
   transition: all 0.4s ease;
-  background: linear-gradient(140deg, #FFFFFF, #D45B7A);
+  background: linear-gradient(140deg, #ffffff, #d45b7a);
   z-index: 1;
 }
-.wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card #이지영{
+.wrapper
+  .module-team
+  .team
+  .team-cards
+  .swiper-container
+  .swiper-slide
+  .card
+  #이지영 {
   position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   border-radius: 4px 4px 0px 0px;
   transition: all 0.4s ease;
-  background: linear-gradient(140deg, #FFFFFF, #FDA576);
+  background: linear-gradient(to right, #92fe9d, #00c9ff);
   z-index: 1;
 }
-.wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card #정승하{
+.wrapper
+  .module-team
+  .team
+  .team-cards
+  .swiper-container
+  .swiper-slide
+  .card
+  #정승하 {
   position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   border-radius: 4px 4px 0px 0px;
   transition: all 0.4s ease;
-  background: linear-gradient(140deg, #D45B7A, #7b37e1);
+  background: linear-gradient(to right, #dd2476, #ff512f);
   z-index: 1;
 }
 
-.wrapper .module-team .team .team-cards .swiper-container .swiper-slide .card #이소영{
+.wrapper
+  .module-team
+  .team
+  .team-cards
+  .swiper-container
+  .swiper-slide
+  .card
+  #이소영 {
   position: absolute;
   width: 100%;
   height: 100px;
   top: 0;
   border-radius: 4px 4px 0px 0px;
   transition: all 0.4s ease;
-  background: linear-gradient(140deg, #6F7073, #11451d);
+  background: linear-gradient(to right, #ffe000, #799f0c);
   z-index: 1;
 }
 
