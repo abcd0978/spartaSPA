@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    // set_temp();
-    show_comment();
+
+  set_temp();
+  show_comment();
+
+    
 });
 
 function set_temp() {
@@ -12,21 +15,31 @@ function set_temp() {
         });
 }
 function save_comment() {
+  let face = $("#face ").val();
   let name = $("#name ").val();
   let message = $("#message").val();
   let password = $("#password").val();
 
-    let formData = new FormData();
-    formData.append('name_give', name);
-    formData.append('password_give', password);
-    formData.append('message_give', message);
+  let formData = new FormData();
+  formData.append("face_give", face);
+  formData.append("name_give", name);
+  formData.append("password_give", password);
+  formData.append("message_give", message);
 
-    fetch('/hithere', { method: 'POST', body: formData })
-        .then((res) => res.json())
-        .then((data) => {
-            alert(data['msg']);
-            window.location.reload();
-        });
+  fetch("/hithere", { method: "POST", body: formData })
+    .then((res) => res.json())
+    .then((data) => {
+      alert(data["msg"]);
+      window.location.reload();
+    });
+}
+
+
+
+  
+
+  
+
 }
 
 function modify(event) {
@@ -58,36 +71,43 @@ function show_comment() {
             let rows = data['result'];
             $('#comment-list').empty();
 
-            rows.forEach((a) => {
-                let id = a['id'];
-                let name = a['name'];
-                let commentId = a['id'];
-                let message = a['message'];
 
-                let temp_html = ` 
-                <div id="comment-list" style="min-width: 300px;" >
-                  <div class="trash"> 
-                    <h6 class="fw-bold mb-1">${name}</h6>
-                    <button onclick="del_comment('${id}')" type="button"><img src="../static/img/trash3.svg"></img></button>
-                    <button onclick="modify(event)" type="button"><img src="../static/img/pencil-square.svg"></img></button>
-                  </div>
-                
-                  <p id="${commentId}">
-                  
-                  </p>
-                
-                
-                  <div class="d-flex align-items-center mb-3">
-                    <p class="mb-0">
-                      ${message}
-                  
-                    </p>
-                  </div>
-                </div>`;
-                $('#comment-list').append(temp_html);
-            });
-        });
-}
+      rows.forEach((a) => {
+        let face = a["face"];
+         let id = a['id'];
+        let name = a["name"];
+        let commentId = a["id"];
+        let message = a["message"];
+
+        let temp_html = `    <div id="comment-list" style="min-width: 300px;" >
+                                   <div class="trash"> 
+                                   <p class="aa">
+                                  ${face} 
+                                   </p>
+                                
+                                   <h6 class="fw-bold mb-1">${name}</h6>
+                                   <button class="junk" onclick="del_comment('${id}')"   type="button"><img src="../static/img/trash3.svg"></img></button>
+                                   <button class="pencil" onclick="modify(event)" type="button"><img src="../static/img/pencil-square.svg"></img></button>
+                                    </div>
+                                 
+                                  <p id="${commentId}">
+                                 
+                                   </p>
+                                  
+                             
+                                  <div class="d-flex align-items-center mb-3">
+                                  <p class="mb-0">
+                                  ${message}
+
+                                  </p>
+                                  </div>
+                                </div>`;
+
+        $("#comment-list").append(temp_html);
+      });
+    });
+
+ }
 
 function del_comment(id) {
     const password = prompt('비밀번호', '');
@@ -106,4 +126,5 @@ function del_comment(id) {
                 alert('비밀번호가 일치하지 않습니다');
             }
         });
+
 }

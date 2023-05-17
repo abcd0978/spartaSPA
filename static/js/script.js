@@ -16,11 +16,12 @@ window.addEventListener("load", event => {
   var swiperWrapper = document.querySelector('.swiper-wrapper');
 
   /* The Team */
+
   var team = [{
           name: "김민규",
           role: "개발자",
           desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
-          photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
+          photo: "../static/img/INFP.jpg",
           website: "https://rafaelalucas.com",
           email: "mailto:rafaelavlucas@gmail.com",
           linkedin: "https://www.linkedin.com/in/rafaelalucas/",
@@ -31,7 +32,7 @@ window.addEventListener("load", event => {
           name: "손형정",
           role: "개발자",
           desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
-          photo: "https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
+          photo:  "../static/img/INFJ.jpg",
           website: "https://rafaelalucas.com",
           email: "mailto:rafaelavlucas@gmail.com",
           linkedin: "https://www.linkedin.com/in/rafaelalucas/",
@@ -42,7 +43,7 @@ window.addEventListener("load", event => {
           name: "이소영",
           role: "개발자",
           desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
-          photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
+           photo: "../static/img/ENFP.jpg",
           website: "https://rafaelalucas.com",
           email: "mailto:rafaelavlucas@gmail.com",
           linkedin: "https://www.linkedin.com/in/rafaelalucas/",
@@ -53,13 +54,24 @@ window.addEventListener("load", event => {
           name: "정승하",
           role: "개발자",
           desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
-          photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=300",
+          photo:  "../static/img/INFJ.jpg",
           website: "https://rafaelalucas.com",
           email: "mailto:rafaelavlucas@gmail.com",
           linkedin: "https://www.linkedin.com/in/rafaelalucas/",
           like: "likeButton",
           github: "www.naver.com"
-      }
+      },
+                          {
+      name: "이지영",
+      role: "Project Manager",
+      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      photo: "../static/img/INTP.jpg",
+      website: "https://rafaelalucas.com",
+      email: "mailto:rafaelavlucas@gmail.com",
+      linkedin: "https://www.linkedin.com/in/rafaelalucas/",
+      dribbble: "https://dribbble.com/rafaelalucas",
+    }
+
   ];
 
   /* Social Icons */
