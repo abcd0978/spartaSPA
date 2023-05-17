@@ -3,7 +3,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>CodePen - Daily UI #006 - Profile</title>
+        <title>7면조 팀을 소개합니다!</title>
         <link href="../static/css/bootstrap.min.css" rel="stylesheet">
         <link href="../static/css/templatemo-festava-live.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,6 +15,15 @@
 
     </head>
     <body>
+     
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+        <div class="bubble b6"></div>
+        <div class="bubble b7"></div>
+
         <!-- partial:index.partial.html -->
         <!-- about -->
             <div class="about"> <a class="bg_links social portfolio" href="https://www.rafaelalucas.com/dailyui" target="_blank">
@@ -31,12 +40,18 @@
         <!-- end about -->
 
         <div class="wrapper">
-         
+            
             <section class="module-team">
-                
+          
 
                 <div class="team">
-                    <h2 class="title">칠면조팀</h2>
+
+                    <h2 class="title">🐦7면조 Profile🐦</h2>
+                    <p class="weather">현재날씨: <span id="temp">36</span>°C</p>
+                  
+
+
+                    
                     
                     <div
                         class="team-cards">
@@ -67,11 +82,24 @@
                                     <form class="custom-form contact-form mb-5 mb-lg-0" method="post" role="form">
                                         <div class="contact-form-body">
                                             <div  class="row">
-                                                <div class="col-lg-6 col-md-6 col-12">
+                                                <div id="top" class="col-lg-6 col-md-6 col-12">
+                                                    <select id="face">
+                                                    
+                                                    <option selected>🐦</option>
+                                                    <option value="🐤">🐤</option>
+                                                    <option value="🕊️" >🕊️</option>
+                                                    <option  value="🦜">🦜</option>
+                                                    <option  value="🦉">🦉</option>
+                                                    <option  value="🦚">🦚</option>
+                                                    
+                                                  </select>
                                                     <input type="text" name="contact-name" id="name" class="form-control" placeholder="name" required="">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <input type="text" name="contact-company" type="password" id="pass" class="form-control" placeholder="password" required="">
+
+                                              
+                                                <div >
+                                                    <input type="text" name="contact-company" type="password" id="password" class="form-control" placeholder="password" required="">
+
                                                 </div>
                                           
                                                 <textarea name="contact-message" rows="3" class="form-control" id="message" placeholder="Message"></textarea>
