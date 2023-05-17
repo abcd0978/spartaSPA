@@ -27,6 +27,7 @@
 #top {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 /* 선택 이모티콘 */
@@ -40,7 +41,6 @@
 
 #name {
   width: 100%;
-  min-width: 100%;
 }
 /* 댓글 창 */
 #right {
