@@ -68,7 +68,7 @@ window.addEventListener("load", event => {
       iEmail: "https://rafaelalucas.com/dailyui/6/assets/email.svg",
       iLinkedin: "https://rafaelalucas.com/dailyui/6/assets/linkedin.svg",
       iLike: "",
-      iGithub: '../img/likeFilled.svg'
+      iGithub: '../../static/img/github.svg'
   }];
 
   var iWebsite = icons[0].iWebsite,

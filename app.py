@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, jsonify
+from bson.objectid import ObjectId
+import uuid
 app = Flask(__name__)
 
 from pymongo import MongoClient
@@ -7,23 +9,23 @@ client = MongoClient(  'mongodb+srv://sparta:test@cluster0.bkvgtmw.mongodb.net/r
 
 db = client.dbsparta
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def home():
    return render_template('index.html')
 
 
-@app.route("/hithere", methods=["POST"])
+@app.route("/hithere", methods=["GET","POST"])
 def hi_post():
     name_receive = request.form['name_give']
     password_receive = request.form['password_give']
     message_receive = request.form['message_give']
-   
+    print(name_receive,password_receive,message_receive)
     doc = {
-      'name': name_receive,
-     'password': password_receive,
-     'message': message_receive
+        'id': str(uuid.uuid1()),
+        'name': name_receive,
+        'password': password_receive,
+        'message': message_receive
     }
-     
     db.hi.insert_one(doc)
 
     return jsonify({'msg': '저장 완료!'})
@@ -31,18 +33,18 @@ def hi_post():
 @app.route("/hi", methods=["GET"])
 def hi_get():
     all_comments= list(db.hi.find({},{'_id':False}))
+    print(all_comments)
     return jsonify({'result': all_comments})
-
-@app.route("/hi", methods=["PUT"])
+@app.route("/comment", methods=['PUT'])
 def hi_PUT():
     commentId_reveive = request.form['commentId_give']
     password_receive = request.form['password_give']
     modified_comment = request.form['modified_comment']
-    query = {'_id':commentId_reveive}
-    newValue = {"$set" : {"message": modified_comment}}
-    db.hi.update_one({query,})
-    return jsonify({'result': 'success'})
+    query = {'id':str(commentId_reveive)}
+    newValue = {"$set" : {"message": str(modified_comment)}}
+    db.hi.update_one(query,newValue)
+    return jsonify({'result': '댓글을 수정했습니다.'})
 
 
 if __name__ == '__main__':
-   app.run('0.0.0.0', port=5000, debug=True)
+   app.run('0.0.0.0', port=5001, debug=True)

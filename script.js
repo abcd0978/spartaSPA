@@ -2,10 +2,10 @@ function a(e){
     let likeButtonImg = e.target
     if(likeButtonImg.className === "like"){
         likeButtonImg.className = "likeFilled"
-        likeButtonImg.src = './likeFilled.svg'
+        likeButtonImg.src = '../../static/img/likeFilled.svg'
     }else{
         likeButtonImg.className = "like"
-        likeButtonImg.src = './like.svg'
+        likeButtonImg.src = '../../static/img/like.svg'
     }
     
 }
