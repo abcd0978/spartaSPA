@@ -54,7 +54,25 @@
   margin-left: 20px;
 }
 
+
 /* 댓글 쓰는곳,작성되는 곳  */
+
+.trash {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+  }
+  .junk {
+  background-color: white;
+  margin-top: -10px;
+  }
+  .pencil {
+  margin-left: 5px;
+  background-color: white;
+  margin-top: -10px;
+  }
+
+
 .comment-area {
   margin-bottom: 130px;
 }
@@ -10600,3 +10618,17 @@ fieldset:disabled .btn {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+.trash {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+  }
+  .junk {
+  background-color: white;
+  margin-top: -10px;
+  }
+  .pencil {
+  margin-left: 5px;
+  background-color: white;
+  margin-top: -10px;
+  }
