@@ -68,7 +68,7 @@ function show_comment() {
 
         let temp_html = `    <div id="comment-list" style="min-width: 300px;" >
                                    <div class="trash"> 
-                                   <p class="aa"
+                                   <p class="aa">
                                   ${face} 
                                    </p>
                                 

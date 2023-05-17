@@ -7,7 +7,7 @@ client = MongoClient(  'mongodb+srv://sparta:test@cluster0.bkvgtmw.mongodb.net/r
 
 db = client.dbsparta
 
-@app.route('/')
+@app.route('/', methods=["GET","POST"])
 def home():
    return render_template('index.html')
 
