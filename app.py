@@ -14,11 +14,13 @@ def home():
 
 @app.route("/hithere", methods=["POST"])
 def hi_post():
+    face_receive = request.form['face_give']
     name_receive = request.form['name_give']
     password_receive = request.form['password_give']
     message_receive = request.form['message_give']
    
     doc = {
+      'face': face_receive,
       'name': name_receive,
      'password': password_receive,
      'message': message_receive
@@ -28,10 +30,14 @@ def hi_post():
 
     return jsonify({'msg': '저장 완료!'})
 
+
 @app.route("/hi", methods=["GET"])
 def hi_get():
     all_comments= list(db.hi.find({},{'_id':False}))
     return jsonify({'result': all_comments})
+
+
+
 
 @app.route("/hi", methods=["PUT"])
 def hi_PUT():

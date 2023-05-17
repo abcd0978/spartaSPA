@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // set_temp();
+  set_temp();
   show_comment();
 });
 
@@ -12,12 +12,13 @@ function set_temp() {
     });
 }
 function save_comment() {
+  let face = $("#face ").val();
   let name = $("#name ").val();
-
   let message = $("#message").val();
   let password = $("#password").val();
 
   let formData = new FormData();
+  formData.append("face_give", face);
   formData.append("name_give", name);
   formData.append("password_give", password);
   formData.append("message_give", message);
@@ -29,6 +30,7 @@ function save_comment() {
       window.location.reload();
     });
 }
+
 function modify() {
   alert("fewfeaw");
 }
@@ -59,24 +61,35 @@ function show_comment() {
       $("#comment-list").empty();
 
       rows.forEach((a) => {
+        let face = a["face"];
         let name = a["name"];
         let commentId = a["_id"];
         let message = a["message"];
 
         let temp_html = `    <div id="comment-list" style="min-width: 300px;" >
-                                  <h6 class="fw-bold mb-1">${name}</h6>
+                                   <div class="trash"> 
+                                   <p class="aa"
+                                  ${face} 
+                                   </p>
+                                
+                                   <h6 class="fw-bold mb-1">${name}</h6>
+                                   <button class="junk"  onclick="remove(event)" type="button"><img src="../static/img/trash3.svg"></img></button>
+                                   <button class="pencil" onclick="modify(event)" type="button"><img src="../static/img/pencil-square.svg"></img></button>
+                                    </div>
+                                 
+                                  <p id="${commentId}">
+                                 
+                                   </p>
+                                  
+                             
                                   <div class="d-flex align-items-center mb-3">
-                                    <p id="${commentId}">
-                                    <button onclick="remove(event)" type="button"><img src="../static/img/trash3.svg"></img></button>
-                                    <button onclick="modify(event)" type="button"><img src="../static/img/pencil-square.svg"></img></button>
-                                     </p>
-                                </div>
-                                  </div>
                                   <p class="mb-0">
                                   ${message}
 
                                   </p>
+                                  </div>
                                 </div>`;
+
         $("#comment-list").append(temp_html);
       });
     });
