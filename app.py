@@ -15,7 +15,7 @@ def home():
    return render_template('index.html')
 
 
-@app.route("/hithere", methods=["GET","POST"])
+@app.route("/comment", methods=["POST"])
 def hi_post():
     face_receive = request.form['face_give']
     name_receive = request.form['name_give']
@@ -36,7 +36,7 @@ def hi_post():
     return jsonify({'msg': '저장 완료!'})
 
 
-@app.route("/hi", methods=["GET"])
+@app.route("/comment", methods=["GET"])
 def hi_get():
     all_comments= list(db.hi.find({},{'_id':False}))
     return jsonify({'result': all_comments})
@@ -58,7 +58,7 @@ def hi_PUT():
     db.hi.update_one(query,newValue)
     return jsonify({'result': '댓글을 수정했습니다.'})
 
-@app.route("/delComment", methods=["POST"])
+@app.route("/comment", methods=["DELETE"])
 def del_comment():
     id_receive = request.form['id_give']
     pw_receive = request.form['pw_give']

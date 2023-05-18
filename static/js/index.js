@@ -23,7 +23,7 @@ function save_comment() {
   formData.append("password_give", password);
   formData.append("message_give", message);
 
-  fetch("/hithere", { method: "POST", body: formData })
+  fetch("/comment", { method: "POST", body: formData })
     .then((res) => res.json())
     .then((data) => {
       alert(data["msg"]);
@@ -54,7 +54,7 @@ function modify(event) {
 }
 
 function show_comment() {
-  fetch("/hi")
+  fetch("/comment")
     .then((res) => res.json())
     .then((data) => {
       let rows = data["result"];
@@ -91,7 +91,7 @@ function show_comment() {
                                   </div>
                                 </div>`;
 
-        $("#comment-list").append(temp_html);
+        $("#comment-list").prepend(temp_html);
       });
     });
 }
@@ -104,7 +104,7 @@ function del_comment(id) {
   formData.append("id_give", id);
   formData.append("pw_give", password);
 
-  fetch("/delComment", { method: "POST", body: formData })
+  fetch("/comment", { method: "DELETE", body: formData })
     .then((res) => res.json())
     .then((data) => {
       if (data["result"]) {
