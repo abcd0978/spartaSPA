@@ -9,7 +9,7 @@
       email:
         "https://www.notion.so/A-7-S-A-7-1684232e26444379bf9380eb85dbfdea?pvs=4",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      like: "likeButton",
+      like: 0,
       github:
         "https://www.notion.so/A-7-S-A-7-1684232e26444379bf9380eb85dbfdea?pvs=4",
     },
@@ -19,9 +19,9 @@
       desc: "7조 김민규 입니다! 고등학교때부터 락을 좋아해서 대학교때 밴드부도 했습니다! 그래서 기타🎸치는 것을 좋아합니다.<br> 저의 장점은 끈기있게 도전하는 것 입니다. 협업해본 적은 별로 없지만 열심히 하겠습니다.<br> #소통 #열정",
       photo: "../static/img/INFP.jpg",
       website: "https://hungryspider.tistory.com/",
-      email: "kimmin36944@gmail.com",
+      email: "mailto:kimmin36944@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      like: "likeButton",
+      like: 0,
       github: "https://github.com/abcd0978",
     },
     {
@@ -32,7 +32,7 @@
       website: "https://velog.io/@hyungjungson",
       email: "mailto:brochocopie.son@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      like: "likeButton",
+      like: 0,
       github: "https://github.com/hyungjungson",
     },
     {
@@ -43,7 +43,7 @@
       website: "https://rafaelalucas.com",
       email: "mailto:https://blog.naver.com/ddooo__ding",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      like: "likeButton",
+      like: 0,
       github: "https://github.com/ddooo00",
     },
     {
@@ -54,7 +54,7 @@
       website: "https://blog.naver.com/tmdgk10",
       email: "mailto:wjdtmdgk55@gamil.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      like: "likeButton",
+      like: 0,
       github: "https://github.com/projectaub",
     },
     {
@@ -68,6 +68,7 @@
       website: "https://console-log.tistory.com/",
       email: "mailto:lizzie.yyy@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
+      like: 0,
       github: "https://github.com/lizzieFEstudy",
     },
   ];
@@ -79,7 +80,7 @@ var icons = [{
     iEmail: "https://rafaelalucas.com/dailyui/6/assets/email.svg",
     iLinkedin: "https://rafaelalucas.com/dailyui/6/assets/linkedin.svg",
     iLike: "../../static/img/heart-fill.svg",
-    iGithub: '../img/likeFilled.svg'
+    iGithub: "../../static/img/github.svg"
 }];
 
 var iWebsite = icons[0].iWebsite,
@@ -123,7 +124,7 @@ var swiperWrapper = document.querySelector('.swiper-wrapper');
                     <div class="icons">
                             <a class="icon" href="${website}" target="_blank" data-index="0"><img src="${iWebsite}"></a>
                             <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail}"></a> 
-                            <a class="icon" onclick="increaseLikes(${i})"" target="_blank" data-index="3"><span class="like_btn${i}">${like}</span><img src="${iLike}"></a>
+                            <a class="icon" onclick="increaseLikes(${i})"" target="_blank" data-index="3"><span class="like_btn${i}" id = "heart" >${like}</span><img class="heart" src="${iLike}"></a>
                             <a class="icon" href="${github}" target="_blank" data-index="4"><img src="${iGithub}"></a>
                             </div>
                             </div>
