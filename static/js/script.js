@@ -67,7 +67,7 @@ window.addEventListener("load", event => {
       iWebsite: "https://rafaelalucas.com/dailyui/6/assets/link.svg",
       iEmail: "https://rafaelalucas.com/dailyui/6/assets/email.svg",
       iLinkedin: "https://rafaelalucas.com/dailyui/6/assets/linkedin.svg",
-      iLike: "",
+      iLike: "../../static/img/like.svg",
       iGithub: '../../static/img/github.svg'
   }];
 
@@ -112,7 +112,7 @@ window.addEventListener("load", event => {
                           <a class="icon" href="${website}" target="_blank" data-index="0"><img src="${iWebsite}"></a>
                           <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail}"></a>
                           <a class="icon" href="${linkedin}" target="_blank" data-index="2"><img src="${iLinkedin}"></a>
-                          <button class="icon" target="_blank" data-index="3" onclick="a(event)" ><img class="like" src = "./img/github.svg" ></button>
+                          <button class="icon" target="_blank" data-index="3" onclick="a(event)" ><img class="like" src = "${iLike} " ></button>
                           <a class="icon" href="${github}" target="_blank" data-index="4"><img src="${iGithub}"></a>
                           </div>
                           </div>
