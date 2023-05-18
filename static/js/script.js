@@ -18,7 +18,7 @@ window.addEventListener("load", (event) => {
     {
       name: "칠7면조",
       role: "TEAM",
-      desc: "안녕하세요 7조 7면조 Team 입니다~ 우리 팀의 약속은 [무엇을 하든 밥!시간은! 꼭 지키자]입니다. 우리 팀은 전공자와 비전공자가 섞여 있어 실력차이는 나지만, 모두 기술을 구현해 보고 다같이 이끌어 나가며 으쌰으쌰 하는 장점이 있습니다.궁극적인 목표는 이 프로젝트를 통해 개발자에 한 걸음 다가가는 것 입니다. ",
+      desc: "7️⃣조 7️⃣면조 입니다~ 우리 팀의 약속은 [밥!시간은! 꼭 지키자]입니다. 우리 팀은 전공자와 비전공자가 섞여 있어 실력차이는 나지만, 모두 기술을 구현해 보고 다같이 이끌어 나가며 으쌰으쌰 하는 장점이 있습니다.궁극적인 목표는 이 프로젝트를 통해 개발자에 한 걸음 다가가는 것 입니다. ",
       photo: "../static/img/칠면조.png",
       website:
         "https://www.notion.so/A-7-S-A-7-1684232e26444379bf9380eb85dbfdea?pvs=4",
@@ -31,8 +31,8 @@ window.addEventListener("load", (event) => {
     },
     {
       name: "김민규",
-      role: "개발자",
-      desc: "안녕하세요! 개발 공부하는 김민규 입니다! 공부 열심히해서 프론트엔드 개발자가 되고싶습니다 잘부탁 드려요~.",
+      role: "항상 성장하는 개발자",
+      desc: "7조 김민규 입니다! 고등학교때부터 락을 좋아해서 대학교때 밴드부도 했습니다! 그래서 기타🎸치는 것을 좋아합니다.<br> 저의 장점은 끈기있게 도전하는 것 입니다. 협업해본 적은 별로 없지만 열심히 하겠습니다.<br> #소통 #열정",
       photo: "../static/img/INFP.jpg",
       website: "https://hungryspider.tistory.com/",
       email: "kimmin36944@gmail.com",
@@ -43,7 +43,7 @@ window.addEventListener("load", (event) => {
     {
       name: "손형정",
       role: "폭풍검색 개발자",
-      desc: "안녕하세요.<br>7면조팀의 손형정입니다!<br>취미는 음악감상과<br>게임하는 것을 좋아합니다.<br>특기는 남의 이야기를<br>잘 들어줍니다.<br>저는 내향적이지만 일에 대해서는 적극적으로 참여합니다. <br>#열정적",
+      desc: "안녕하세요.<br>7면조팀의 손형정입니다!<br>취미는 음악감상🎵과<br>게임🎮하는 것을 좋아합니다.<br>특기는 남의 이야기를<br>잘 들어줍니다.<br>저는 내향적이지만 일에 대해서는 적극적으로 참여합니다. <br>#열정적",
       photo: "../static/img/INFJ.jpg",
       website: "https://velog.io/@hyungjungson",
       email: "mailto:brochocopie.son@gmail.com",
@@ -54,7 +54,7 @@ window.addEventListener("load", (event) => {
     {
       name: "이소영",
       role: "아이디어 뱅크 개발자",
-      desc: "🤩안녕하세요🤩<br>7면조 중 유일한 E <br>이소영입니다!<br>취미는 게임,여행,애니메이션 보기입니다.<br>특기는 일본어 잘 하고 오버워치 다이아💎입니다!!<br>저는 E에 걸맞게 사람들한테 말을 잘 걸고 금방 친해지는 장점이 있습니다!<br>#소통#잘 들어주기✌🏻",
+      desc: "7면조 중 유일한 E <br>이소영입니다!<br>취미는 게임,여행,애니메이션 보기입니다.<br>특기는 일본어 잘 하고 오버워치 다이아💎입니다!!<br>저는 E에 걸맞게 사람들한테 말을 잘 걸고 금방 친해진다는 장점이 있습니다!모두 화이팅해요👧🏻👦🏻💚<br>#소통#단합력✌🏻",
       photo: "../static/img/ENFP.jpg",
       website: "https://rafaelalucas.com",
       email: "mailto:https://blog.naver.com/ddooo__ding",
@@ -64,8 +64,8 @@ window.addEventListener("load", (event) => {
     },
     {
       name: "정승하",
-      role: "개발자",
-      desc: "🤗안녕하세요🤗<br>7면조 중 최약체<br> 정승하입니다! 취미는 게임, 책읽기, 바둑 입니다.<br> 특기는 일본어 회화 입니다. <br>끈기있게 쭈~~욱 해나가는게 장점입니다.<br> 공부 포기하지 않고 열심히 하겠습니다.",
+      role: "많이 물어보는 개발자",
+      desc: "🤗안녕하세요🤗<br>7면조 중 최약체<br> 정승하입니다! 취미는 게임, 책읽기, 바둑 입니다.<br> 특기는 일본어 회화 입니다. <br>끈기있게 쭈~~욱 해나가는게 장점입니다.<br> 공부 포기하지 않고 열심히 하겠습니다. <br>#책임감",
       photo: "../static/img/INFJ.jpg",
       website: "https://blog.naver.com/tmdgk10",
       email: "mailto:wjdtmdgk55@gamil.com",
