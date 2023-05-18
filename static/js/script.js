@@ -29,7 +29,7 @@ window.addEventListener("load", (event) => {
     {
       name: "손형정",
       role: "개발자",
-      desc: "안녕하세요. 프론트엔드 개발하는 손형정입니다. 잘 부탁드립니다.",
+      desc: "안녕하세요.<br>7면조팀의 손형정입니다!<br>취미는 음악감상과<br>게임하는 것을 좋아합니다.<br>특기는 남의 이야기를<br>잘 들어줍니다.<br>저는 내향적이지만 일에 대해서는 적극적으로 참여합니다.",
       photo: "../static/img/INFJ.jpg",
       website: "https://velog.io/@hyungjungson",
       email: "mailto:brochocopie.son@gmail.com",
@@ -40,7 +40,7 @@ window.addEventListener("load", (event) => {
     {
       name: "이소영",
       role: "개발자",
-      desc: "안녕하세요!  <br>코린이 이소영입니다!<br>a반 모든 사람들과 친해지고 싶어요!!<br> 다들 화이팅👧🏻👦🏻✌🏻✌🏻",
+      desc: "🤩안녕하세요🤩<br>7면조 중 유일한 E <br>이소영입니다!<br>취미는 게임,여행,애니메이션 보기입니다.<br>특기는 일본어 잘 하고 오버워치 다이아💎입니다!!<br>저는 E에 걸맞게 사람들한테 말을 잘 걸고 금방 친해지는 장점이 있습니다!<br>다들 친해져용 화이팅✌🏻",
       photo: "../static/img/ENFP.jpg",
       website: "https://rafaelalucas.com",
       email: "mailto:https://blog.naver.com/ddooo__ding",
