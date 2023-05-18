@@ -29,45 +29,48 @@ window.addEventListener("load", (event) => {
     {
       name: "손형정",
       role: "개발자",
-      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      desc: "안녕하세요. 프론트엔드 개발하는 손형정입니다. 잘 부탁드립니다.",
       photo: "../static/img/INFJ.jpg",
-      website: "https://rafaelalucas.com",
-      email: "mailto:rafaelavlucas@gmail.com",
+      website: "https://velog.io/@hyungjungson",
+      email: "mailto:brochocopie.son@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
       like: "likeButton",
-      github: "www.naver.com",
+      github: "https://github.com/hyungjungson",
     },
     {
       name: "이소영",
       role: "개발자",
-      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      desc: "안녕하세여!",
       photo: "../static/img/ENFP.jpg",
       website: "https://rafaelalucas.com",
-      email: "mailto:rafaelavlucas@gmail.com",
+      email: "mailto:https://blog.naver.com/ddooo__ding",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
       like: "likeButton",
-      github: "www.naver.com",
+      github: "https://github.com/ddooo00",
     },
     {
       name: "정승하",
       role: "개발자",
-      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      desc: "안녕하세요. 프론트엔드 개발공부시작하는 정승하입니다. 잘 부탁드립니다.",
       photo: "../static/img/INFJ.jpg",
-      website: "https://rafaelalucas.com",
-      email: "mailto:rafaelavlucas@gmail.com",
+      website: "https://blog.naver.com/tmdgk10",
+      email: "mailto:wjdtmdgk55@gamil.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
       like: "likeButton",
-      github: "www.naver.com",
+      github: "https://github.com/projectaub",
     },
     {
       name: "이지영",
       role: "개발자",
-      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      desc: `많이 배워가고 싶고,<br>
+      재밌는거 많이 만들어보고 싶고,
+      모두랑 즐거운 시간 보내고싶어요🫠!<br>
+      #카트수집하기#고양이#낮잠#성격급함`,
       photo: "../static/img/INTP.jpg",
-      website: "https://rafaelalucas.com",
-      email: "mailto:rafaelavlucas@gmail.com",
+      website: "https://console-log.tistory.com/",
+      email: "mailto:lizzie.yyy@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
-      dribbble: "https://dribbble.com/rafaelalucas",
+      github: "https://github.com/lizzieFEstudy",
     },
   ];
 
@@ -120,7 +123,7 @@ window.addEventListener("load", (event) => {
                       <div class="icons">
                           <a class="icon" href="${website}" target="_blank" data-index="0"><img src="${iWebsite}"></a>
                           <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail}"></a>
-                          <a class="icon" href="${linkedin}" target="_blank" data-index="2"><img src="${iLinkedin}"></a>
+                         
                           <button class="icon" target="_blank" data-index="3" onclick="a(event)" ><img class="like" src = "./img/github.svg" ></button>
                           <a class="icon" href="${github}" target="_blank" data-index="4"><img src="${iGithub}"></a>
                           </div>
