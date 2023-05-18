@@ -5,38 +5,188 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+/* 삭제 수정 이모티콘 정렬하려고 만든거 */
+.trash {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+}
+
+/* index.js에서 삭제 이모티콘 */
+.junk {
+  background-color: white;
+  margin-top: -10px;
+}
+/* index.js에서 수정 이모티콘 */
+.pencil {
+  margin-left: 5px;
+  background-color: white;
+  margin-top: -10px;
+}
+/* 이모티콘이랑 이름 감싸는 div */
+#top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* 선택 이모티콘 */
+#face {
+  width: 120px;
+  height: 52px;
+  margin-right: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* name 쓰는 곳 */
+#name {
+  width: 100%;
+}
+/* 댓글 창 */
 #right {
-  display: 200px;
-  height: 350px;
+  width: 390px;
+  height: 480px;
   overflow: scroll;
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
+
+/* 날씨정렬 */
+.weather {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -95px;
+  padding-bottom: 50px;
+}
+
+/* 댓글 쓰는곳,작성되는 곳  */
 
 .trash {
   display: flex;
   flex-direction: row;
   margin-right: 5px;
-  }
-  .junk {
+}
+.junk {
   background-color: white;
   margin-top: -10px;
-  }
-  .pencil {
+}
+.pencil {
   margin-left: 5px;
   background-color: white;
   margin-top: -10px;
-  }
+}
 
 .comment-area {
   margin-bottom: 130px;
 }
-
+/* 댓글 창에서 message 폰트 크기 */
 .mb-0 {
   font-size: 15px;
 }
 
+/* 비눗방울 */
+@import url("https://fonts.googleapis.com/css?family=Lilita+One");
+body {
+  /* background-image: linear-gradient(#ff6633, #660066); */
+  /* background-attachment: fixed; */
+  font-family: "Lilita One";
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  font-size: 1em;
+  color: #fff3e0;
+  text-align: center;
+}
+.bubble {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.4),
+    inset 1em 1em 1em rgba(255, 255, 255, 0.6), 0 1em 2em rgba(0, 0, 0, 0.25);
+}
+.bubble:hover {
+  display: none;
+}
 
+.b1 {
+  animation: floatup 10s linear infinite,
+    sideways 5s ease-in-out infinite alternate;
+  left: 10%;
+  top: 100%;
+}
+.b2 {
+  animation: floatup 5s linear infinite,
+    sideways 4s ease-in-out 1s infinite alternate;
+  left: 15%;
+  top: 30%;
+  transform: scale(0.7);
+}
+.b3 {
+  animation: floatup 4s linear infinite,
+    sideways 6s ease-in-out 6s infinite alternate;
+  left: 20%;
+  transform: scale(1.2);
+}
+.b4 {
+  animation: floatup 6s linear infinite,
+    sideways 5s ease-in-out 3s infinite alternate;
+  left: 25%;
+  top: 90%;
+  transform: scale(0.5);
+}
+.b5 {
+  animation: floatup 8s linear infinite,
+    sideways 6s ease-in-out 3s infinite alternate;
+  left: 30%;
+  top: 30%;
+  transform: scale(1.1);
+}
+.b6 {
+  animation: floatup 7s linear infinite,
+    sideways 4s ease-in-out 3.5s infinite alternate;
+  left: 40%;
+  top: 50%;
+  transform: scale(0.7);
+}
+.b7 {
+  animation: floatup 6s linear infinite,
+    sideways 5s ease-in-out 4s infinite alternate;
+  left: 90%;
+  top: 90%;
+  transform: scale(0.6);
+}
+@keyframes floatup {
+  0% {
+    margin-top: 50%;
+  }
+  100% {
+    margin-top: -50%;
+  }
+}
+@keyframes sideways {
+  0% {
+    margin-left: 0em;
+  }
+  100% {
+    margin-left: 20em;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+/* 비눗방울 끝 */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -753,7 +903,7 @@ progress {
 }
 .col-12 {
   flex: 0 0 auto;
-  width: 100%;
+  /* width: 100%; */
 }
 .offset-1 {
   margin-left: 8.33333333%;
@@ -1921,10 +2071,10 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+  border-radius: 0.375rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2066,7 +2216,7 @@ progress {
   margin-inline-end: 1rem;
 }
 textarea.form-control {
-  min-height: calc(1.5em + 0.75rem + 2px);
+  height: 200px;
 }
 textarea.form-control-sm {
   min-height: calc(1.5em + 0.5rem + 2px);
@@ -10480,13 +10630,13 @@ fieldset:disabled .btn {
   display: flex;
   flex-direction: row;
   margin-right: 5px;
-  }
-  .junk {
+}
+.junk {
   background-color: white;
   margin-top: -10px;
-  }
-  .pencil {
+}
+.pencil {
   margin-left: 5px;
   background-color: white;
   margin-top: -10px;
-  }
+}

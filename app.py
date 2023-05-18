@@ -17,25 +17,35 @@ def home():
 
 @app.route("/hithere", methods=["GET","POST"])
 def hi_post():
+    face_receive = request.form['face_give']
     name_receive = request.form['name_give']
     password_receive = request.form['password_give']
     message_receive = request.form['message_give']
     print(name_receive,password_receive,message_receive)
     doc = {
+
+      'face': face_receive,
     'id': str(uuid.uuid1()),
     'name': name_receive,
     'password': password_receive,
     'message': message_receive
+
     }
     db.hi.insert_one(doc)
 
     return jsonify({'msg': '저장 완료!'})
 
+
 @app.route("/hi", methods=["GET"])
 def hi_get():
     all_comments= list(db.hi.find({},{'_id':False}))
     return jsonify({'result': all_comments})
+
+
+
+
 @app.route("/comment", methods=['PUT'])
+
 def hi_PUT():
     commentId_reveive = request.form['commentId_give']
     password_receive = request.form['password_give']
