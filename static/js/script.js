@@ -40,7 +40,7 @@ window.addEventListener("load", (event) => {
     {
       name: "이소영",
       role: "개발자",
-      desc: "안녕하세여!",
+      desc: "안녕하세요!  <br>코린이 이소영입니다!<br>a반 모든 사람들과 친해지고 싶어요!!<br> 다들 화이팅👧🏻👦🏻✌🏻✌🏻",
       photo: "../static/img/ENFP.jpg",
       website: "https://rafaelalucas.com",
       email: "mailto:https://blog.naver.com/ddooo__ding",
