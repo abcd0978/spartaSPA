@@ -1,20 +1,4 @@
-function a(e) {
-  let likeButtonImg = e.target;
-  if (likeButtonImg.className === "like") {
-    likeButtonImg.className = "likeFilled";
-    likeButtonImg.src = "./likeFilled.svg";
-  } else {
-    likeButtonImg.className = "like";
-    likeButtonImg.src = "./like.svg";
-  }
-}
-
-window.addEventListener("load", (event) => {
-  var swiperWrapper = document.querySelector(".swiper-wrapper");
-
-  /* The Team */
-
-  var team = [
+ var team = [
     {
       name: "칠7면조",
       role: "TEAM",
@@ -88,66 +72,89 @@ window.addEventListener("load", (event) => {
     },
   ];
 
-  /* Social Icons */
-  var icons = [
-    {
-      iWebsite: "https://rafaelalucas.com/dailyui/6/assets/link.svg",
-      iEmail: "https://rafaelalucas.com/dailyui/6/assets/email.svg",
-      iLinkedin: "https://rafaelalucas.com/dailyui/6/assets/linkedin.svg",
-      iLike: "../../static/img/heart-fill.svg",
-      iGithub: "../../static/img/github.svg",
-    },
-  ];
 
-  var iWebsite = icons[0].iWebsite,
+
+var icons = [{
+    iWebsite: "https://rafaelalucas.com/dailyui/6/assets/link.svg",
+    iEmail: "https://rafaelalucas.com/dailyui/6/assets/email.svg",
+    iLinkedin: "https://rafaelalucas.com/dailyui/6/assets/linkedin.svg",
+    iLike: "../../static/img/heart-fill.svg",
+    iGithub: '../img/likeFilled.svg'
+}];
+
+var iWebsite = icons[0].iWebsite,
     iEmail = icons[0].iEmail,
     iLinkedin = icons[0].iLinkedin,
     iLike = icons[0].iLike,
     iGithub = icons[0].iGithub;
 
-  /* Function to populate the team members */
-  function addTeam() {
-    for (let i = 0; i < team.length; i++) {
-      /* Variables for the team */
-      var name = team[i].name,
-        role = team[i].role,
-        desc = team[i].desc,
-        photo = team[i].photo,
-        website = team[i].website,
-        email = team[i].email,
-        linkedin = team[i].linkedin,
-        like = team[i].like,
-        github = team[i].github;
+var swiperWrapper = document.querySelector('.swiper-wrapper');
 
-      /* Template for the Team Cards */
-      var template = `
-              <div class="swiper-slide">
-              <div class="card">
-                  <span class="bg" id=${name}></span>
-                  <span class="more"></span>
-                  <figure class="photo"><img src="${photo}"></figure>
-                      <article class="text">
-                          <p class="name">${name}</p>
-                          <p class="role">${role}</p> 
-                          <p  class="desc" >${desc}</p> 
-                      </article>
-                      
-                      <div class="social">
-                      <span class="pointer"></span>
-                      <div class="icons">
-                          <a class="icon" href="${website}" target="_blank" data-index="0"><img src="${iWebsite}"></a>
-                          <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail}"></a>
-                          
-                          <button class="icon" target="_blank" data-index="3" onclick="a(event)" ><img class="like" src = "${iLike}" ></button>
-                          <a class="icon" href="${github}" target="_blank" data-index="4"><img src="${iGithub}"></a>
-                          </div>
-                          </div>
-                  </div>
-              </div>`;
+    function addTeam() {
+        for (let i = 0; i < team.length; i++) {
 
-      swiperWrapper.insertAdjacentHTML("beforeend", template);
-    }
-  }
+            /* Variables for the team */
+            var name = team[i].name,
+                role = team[i].role,
+                desc = team[i].desc,
+                photo = team[i].photo,
+                website = team[i].website,
+                email = team[i].email,
+                linkedin = team[i].linkedin,
+                like = team[i].like,
+                github = team[i].github
+
+            /* Template for the Team Cards */
+            var template = `
+                <div class="swiper-slide">
+                <div class="card">
+                    <span class="bg" id=${name}></span>
+                    <span class="more"></span>
+                    <figure class="photo"><img src="${photo}">
+                    </figure>
+                    <article class="text">
+                        <p class="name">${name}</p>
+                        <p class="role">${role}</p> 
+                        <p class="desc">${desc}</p> 
+                    </article>
+                        
+                        <div class="social">
+                        <span class="pointer"></span>
+                    <div class="icons">
+                            <a class="icon" href="${website}" target="_blank" data-index="0"><img src="${iWebsite}"></a>
+                            <a class="icon" href="${email}" target="_blank" data-index="1"><img src="${iEmail}"></a> 
+                            <a class="icon" onclick="increaseLikes(${i})"" target="_blank" data-index="3"><span class="like_btn${i}">${like}</span><img src="${iLike}"></a>
+                            <a class="icon" href="${github}" target="_blank" data-index="4"><img src="${iGithub}"></a>
+                            </div>
+                            </div>
+                    </div>
+                </div>`;
+
+            swiperWrapper.insertAdjacentHTML('beforeend', template);
+        }
+    };
+
+
+
+
+
+
+ async function increaseLikes(num) {
+    team[num].like++
+    let like_buttons = document.getElementsByClassName("like_btn" + num);
+    like_buttons.textContent = team[num].like
+    Array.from(like_buttons).forEach((el) => (el.textContent = team[num].like));
+ }
+
+
+
+
+
+
+
+
+window.addEventListener("load", (event) => {
+
 
   addTeam();
 
@@ -226,3 +233,4 @@ window.addEventListener("load", (event) => {
 
   /* end */
 });
+

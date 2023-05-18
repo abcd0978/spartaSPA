@@ -10,17 +10,29 @@ client = MongoClient(  'mongodb+srv://sparta:test@cluster0.bkvgtmw.mongodb.net/r
 
 db = client.dbsparta
 
+
 @app.route('/', methods=["GET","POST"])
+
 def home():
    return render_template('index.html')
 
 
+
+
+
+
 @app.route("/hithere", methods=["GET","POST"])
+
 def hi_post():
     face_receive = request.form['face_give']
     name_receive = request.form['name_give']
     password_receive = request.form['password_give']
     message_receive = request.form['message_give']
+
+
+
+     
+
     print(name_receive,password_receive,message_receive)
     doc = {
 
@@ -31,15 +43,18 @@ def hi_post():
     'message': message_receive
 
     }
+
     db.hi.insert_one(doc)
 
     return jsonify({'msg': '저장 완료!'})
 
 
+
 @app.route("/hi", methods=["GET"])
 def hi_get():
-    all_comments= list(db.hi.find({},{'_id':False}))
-    return jsonify({'result': all_comments})
+     all_comments= list(db.hi.find({},{'_id':False}))
+     return jsonify({'result': all_comments})
+    
 
 
 
@@ -71,5 +86,9 @@ def del_comment():
         db.hi.delete_one({'id':id_receive})
         return jsonify({'result': 1})
 
+
+
 if __name__ == '__main__':
+
    app.run('0.0.0.0', port=5001, debug=True)
+

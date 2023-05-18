@@ -1,7 +1,11 @@
+
 $(document).ready(function () {
   set_temp();
+
   show_comment();
 });
+
+
 
 function set_temp() {
   fetch("http://spartacodingclub.shop/sparta_api/weather/seoul")
@@ -9,6 +13,23 @@ function set_temp() {
     .then((data) => {
       let temp = data["temp"];
       $("#temp").text(temp);
+    });
+}
+function getLike(){
+  fetch("/like_get")
+    .then((res) => res.json())
+    .then((data) => {
+      for(let i=0;i<data.length; i++){
+        console.log(data);
+        console.log(data[i]);
+        let who = document.getElementById(data[i].name);
+        console.log(data[i].name+"의 카드")
+        console.log(who.nextSibling.nextSibling)
+        //let like_buttons = document.getElementsByClassName("like_btn" + i);
+        //like_buttons.textContent = team[i].like
+        //Array.from(like_buttons).forEach((el) => (el.textContent = team[i].like));
+
+      }
     });
 }
 function save_comment() {
@@ -45,7 +66,9 @@ function modify(event) {
   formData.append("password_give", password);
   formData.append("commentId_give", commentId);
   formData.append("modified_comment", modifiedComment);
+
   fetch("/comment", { method: "PUT", body: formData })
+
     .then((res) => res.json())
     .then((data) => {
       alert(data["result"]);
@@ -59,7 +82,8 @@ function show_comment() {
     .then((data) => {
       let rows = data["result"];
       $("#comment-list").empty();
-
+      
+      console.log(rows)
       rows.forEach((a) => {
         let face = a["face"];
         let id = a["id"];
@@ -96,6 +120,23 @@ function show_comment() {
     });
 }
 
+
+
+
+
+
+
+  
+  
+   
+       
+        
+   
+  
+       
+  
+   
+
 function del_comment(id) {
   const password = prompt("비밀번호", "");
   if (!password) return alert("비밀번호를 입력해주세요");
@@ -114,3 +155,4 @@ function del_comment(id) {
       }
     });
 }
+
