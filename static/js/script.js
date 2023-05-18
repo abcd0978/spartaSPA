@@ -18,13 +18,13 @@ window.addEventListener("load", (event) => {
     {
       name: "김민규",
       role: "개발자",
-      desc: "Far far away, behind the world mountains, far from the countries Vokalia and Consonantia, theres live the blind texts.",
+      desc: "안녕하세요! 개발 공부하는 김민규 입니다! 공부 열심히해서 프론트엔드 개발자가 되고싶습니다 잘부탁 드려요~.",
       photo: "../static/img/INFP.jpg",
-      website: "https://rafaelalucas.com",
-      email: "mailto:rafaelavlucas@gmail.com",
+      website: "https://hungryspider.tistory.com/",
+      email: "kimmin36944@gmail.com",
       linkedin: "https://www.linkedin.com/in/rafaelalucas/",
       like: "likeButton",
-      github: "www.naver.com",
+      github: "https://github.com/abcd0978",
     },
     {
       name: "손형정",
