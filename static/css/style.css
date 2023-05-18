@@ -165,9 +165,11 @@ div {
 }
 
 body {
+    overflow-x: hidden;
+    position: relative;
+    height: auto;
     margin: 0;
     padding: 0;
-    height: auto;
     font-family: 'Barlow', sans-serif;
     background: white;
 }
@@ -738,4 +740,13 @@ body {
 
 .wrapper .module-team .team .sub-title::before {
     display: none;
+}
+
+/* 버블 */
+.bubble_wrap {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
